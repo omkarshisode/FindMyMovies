@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cardview_dark_background"
+    tools:context=".activites.MovieDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@color/cardview_dark_background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_gravity="center|top">
+
+        <ImageView
+            android:id="@+id/movie_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/movie_app_icon" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/movie_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="movie name"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+       />
+
+    <TextView
+        android:id="@+id/release_year_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:layout_gravity="center_horizontal"
+         />
+
+        <TextView
+            android:id="@+id/run_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="run time"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="movie description"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/trailer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Preview"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <VideoView
+            android:id="@+id/video_vv"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+</ScrollView>
