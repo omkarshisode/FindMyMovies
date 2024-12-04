@@ -40,6 +40,10 @@ class MovieDetailsActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Render all the data related to the movie like image, name, release data, descriptions
+     * @param titleId movie titleId that used to fetch all the movie data
+     */
     private fun renderMovieDetails(titleId: String) {
         movieDetailsViewModel.fetchMovieDetails(titleId).observe(this) { titleResponse ->
             val description =
@@ -61,8 +65,12 @@ class MovieDetailsActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Play video using the url in video view tag
+     * @param videoUrl string url that contain video
+     */
     private fun setUpVideoView(videoUrl: String) {
-        val uri = Uri.parse("https://imdb-video.media-imdb.com/vi447873305/1434659454657-dx9ykf-1616202365476.mp4")
+        val uri = Uri.parse(videoUrl)
         val videoView = binding.videoVv
         videoView.setVideoURI(uri)
         mediaController?.setAnchorView(videoView)
